@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation menu-->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Razel <span>Rosal</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="#home">Home</a></div>
+                <div class="link"><a href="#about">About</a></div>
+                <div class="link"><a href="#skills">Skills</a></div>
+                <div class="link"><a href="#projects">Projects</a></div>
+                <div class="link"><a href="#ojt">OJT</a></div>
+                <div class="link"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#ojt">OJT</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <!-- Left: Image -->
+            <div class="home-img">
+                <img src="Assets/prof.png" alt="Razel Rosal">
+            </div>
+
+            <!-- Right: Intro Text -->
+            <div class="home-text">
+                <h1><span class="typing"></span></h1>
+                <p>I'm passionate about technology, coding, and creating modern solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h1>About <span>Me</span></h1>
+        <p>
+            I am Razel Rosal, a 4th-year BS Information Technology student with a strong passion for solving problems through technology. 
+            I specialize in troubleshooting, PC assembly and disassembly, hardware maintenance, and technical documentation.
+        </p>
+
+        <div class="about-details">
+            <h3>Skills Summary</h3>
+            <ul>
+                <li>Communication</li>
+                <li>Problem-solving</li>
+                <li>Technical Proficiencies: HTML, CSS, JavaScript, C#, Java</li>
+            </ul>
+
+            <div class="resume-link">
+                <h3>Resume / CV</h3>
+                <a href="Assets/CV.pdf" target="_blank">Download My Resume (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>My <span>Skills</span></h1>
+        <p>Here are the technologies and fields I specialize in:</p>
+
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Troubleshooting</h3>
+                <div class="progress-bar"><div class="progress" style="width: 80%">80%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-solid fa-code"></i>
+                <h3>C#</h3>
+                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-java"></i>
+                <h3>Java</h3>
+                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h1>My <span>Projects</span></h1>
+            <p>Some of the works and projects I’ve built and contributed to.</p>
+
+            <div class="row mt-5">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/portfolio.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/project2.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tailor Booking System</h5>
+                            <p class="card-text">A web-based system for managing tailor bookings using PHP, MySQL, and Bootstrap.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/project3.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Board Game Prototype</h5>
+                            <p class="card-text">A digital board game prototype with randomized weather events and strategy mechanics.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OJT Section -->
+    <section id="ojt">
+        <div class="container">
+            <h1>My <span>OJT Experience</span></h1>
+            <p>Here are some highlights, files, and pictures from my On-the-Job Training.</p>
+
+            <div class="row mt-5">
+                <!-- OJT Entry 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/ojt1.png" class="card-img-top" alt="OJT Task 1">
+                        <div class="card-body">
+                            <h5 class="card-title">System Maintenance</h5>
+                            <p class="card-text">Assisted in troubleshooting and maintaining office computer systems, ensuring smooth daily operations.</p>
+                            <a href="Assets/OJT_Report1.pdf" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/ojt2.png" class="card-img-top" alt="OJT Task 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Support</h5>
+                            <p class="card-text">Contributed to updating and testing web applications using HTML, CSS, and JavaScript.</p>
+                            <a href="Assets/OJT_Report2.pdf" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <img src="Assets/ojt3.png" class="card-img-top" alt="OJT Task 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Documentation & Reports</h5>
+                            <p class="card-text">Prepared technical documentation and weekly reports summarizing tasks and learnings.</p>
+                            <a href="Assets/OJT_Report3.pdf" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h1>Contact <span>Me</span></h1>
+        <p>Email: razelrosal77@gmail.com</p>
+
+
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        function hamburg() {
+            document.querySelector(".dropdown").style.display = "block";
+        }
+        function cancel() {
+            document.querySelector(".dropdown").style.display = "none";
+        }
+
+        const texts = [
+            "Hello, I am Razel Rosal",
+            "I am an IT Student",
+            "I am a Tech Enthusiast"
+        ];
+
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) count = 0;
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector(".typing").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 1500);
+            } else {
+                setTimeout(type, 100);
+            }
+        })();
+    </script>
+</body>
+</html>

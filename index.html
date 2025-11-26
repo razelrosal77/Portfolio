@@ -5,6 +5,8 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Razel Rosal — IT student, troubleshooting, web development portfolio." />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="index.css">
@@ -14,7 +16,7 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                Razel <span>Rosal</span>
+                <img src="Assets/logo1.png" alt="Razel Rosal Logo" />
             </div>
             <div class="links">
                 <div class="link"><a href="#home">Home</a></div>
@@ -24,16 +26,21 @@
                 <div class="link"><a href="#ojt">OJT</a></div>
                 <div class="link"><a href="#contact">Contact</a></div>
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            <button class="hamburg" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
-        <div class="dropdown">
+        <div id="mobile-menu" class="dropdown" hidden>
             <div class="links">
                 <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#ojt">OJT</a>
                 <a href="#contact">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                <button class="cancel" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -43,12 +50,16 @@
         <div class="home-container">
             <!-- Left: Image -->
             <div class="home-img">
-                <img src="Assets/prof.png" alt="Razel Rosal">
+                <picture>
+                    <source srcset="Assets/prof.png" type="image/webp">
+                    <img src="Assets/prof.png" alt="Razel Rosal — portrait" width="280" height="280" loading="lazy">
+                </picture>
             </div>
 
             <!-- Right: Intro Text -->
             <div class="home-text">
-                <h1><span class="typing"></span></h1>
+                <h1><span class="typing" aria-live="polite"></span></h1>
+                <noscript><h2>Hello, I am Razel Rosal</h2></noscript>
                 <p>I'm passionate about technology, coding, and creating modern solutions.</p>
             </div>
         </div>
@@ -63,16 +74,28 @@
         </p>
 
         <div class="about-details">
-            <h3>Skills Summary</h3>
-            <ul>
-                <li>Communication</li>
-                <li>Problem-solving</li>
-                <li>Technical Proficiencies: HTML, CSS, JavaScript, C#, Java</li>
-            </ul>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li><strong>Technical Support:</strong> Hardware troubleshooting, system diagnostics, preventive maintenance</li>
+                        <li><strong>Hardware Skills:</strong> PC assembly, RAM upgrades, component replacement, device testing</li>
+                        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, responsive design</li>
+                        <li><strong>Programming:</strong> C#, Java, object-oriented design</li>
+                        <li><strong>Soft Skills:</strong> Communication, problem-solving, attention to detail, teamwork</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>Professional Background</h3>
+                    <p>Currently pursuing a degree in Information Technology with hands-on experience in IT support, system administration, and web development. Completed extensive on-the-job training covering PC maintenance, server configuration, and hardware testing.</p>
+                    <p>Passionate about continuous learning and staying updated with emerging technologies in both hardware and software domains.</p>
+                </div>
+            </div>
 
             <div class="resume-link">
                 <h3>Resume / CV</h3>
-                <a href="Assets/CV.pdf" target="_blank">Download My Resume (PDF)</a>
+                <a href="Assets/CV.pdf" target="_blank" class="btn btn-primary">Download My Resume (PDF)</a>
             </div>
         </div>
     </section>
@@ -86,32 +109,32 @@
             <div class="skill">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
                 <h3>Troubleshooting</h3>
-                <div class="progress-bar"><div class="progress" style="width: 80%">80%</div></div>
+                <div class="progress-bar" data-value="80"><div class="progress">80%</div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-html5"></i>
                 <h3>HTML</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-css3-alt"></i>
                 <h3>CSS</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-js"></i>
                 <h3>JavaScript</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
             </div>
             <div class="skill">
                 <i class="fa-solid fa-code"></i>
                 <h3>C#</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
             </div>
             <div class="skill">
                 <i class="fa-brands fa-java"></i>
                 <h3>Java</h3>
-                <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
             </div>
         </div>
     </section>
@@ -126,11 +149,14 @@
                 <!-- Project 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/portfolio.png" class="card-img-top" alt="Project 1">
+                            <picture>
+                                <source srcset="Assets/Portfolio.png" type="image/webp">
+                                <img src="Assets/Portfolio.png" class="card-img-top" alt="Portfolio project screenshot" loading="lazy" width="400" height="200">
+                            </picture>
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Website</h5>
                             <p class="card-text">A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <a href="Assets/Portfolio.png" class="btn btn-primary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -138,11 +164,15 @@
                 <!-- Project 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/project2.png" class="card-img-top" alt="Project 2">
+                        <picture>
+                            <source srcset="Assets/Project.jpg" type="image/webp">
+                            <img src="Assets/Project.jpg" class="card-img-top" alt="Tailor booking system screenshot" loading="lazy" width="400" height="200">
+                        </picture>
                         <div class="card-body">
-                            <h5 class="card-title">Tailor Booking System</h5>
-                            <p class="card-text">A web-based system for managing tailor bookings using PHP, MySQL, and Bootstrap.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title">Tabletop Strategy Game</h5>
+                             <p class="card-text">An Android-based turn-based strategy game 
+                                with interactive gameplay, dice mechanics, and dynamic weather events.</p>
+                            <a href="Assets/Project.jpg" class="btn btn-primary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -150,11 +180,59 @@
                 <!-- Project 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/project3.png" class="card-img-top" alt="Project 3">
+                        <picture>
+                            <source srcset="Assets/PROJECT 3.png" type="image/webp">
+                            <img src="Assets/PROJECT 3.png" class="card-img-top" alt="Multimedia design project screenshot" loading="lazy" width="400" height="200">
+                        </picture>
                         <div class="card-body">
-                            <h5 class="card-title">Board Game Prototype</h5>
-                            <p class="card-text">A digital board game prototype with randomized weather events and strategy mechanics.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title">Multimedia Design Project</h5>
+                            <p class="card-text">A creative multimedia project created using Photoshop, featuring custom graphics, visual effects, and professional design techniques.</p>
+                            <a href="Assets/PROJECT 3.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/Project4.png" type="image/webp">
+                            <img src="Assets/Project4.png" class="card-img-top" alt="Blender stall 3D modeling project" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Blender Stall Project</h5>
+                            <p class="card-text">A 3D modeling project created in Blender featuring detailed stall design with realistic textures, lighting, and architectural elements.</p>
+                            <a href="Assets/Project4.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/project 5.png" type="image/webp">
+                            <img src="Assets/project 5.png" class="card-img-top" alt="Bookify booking website" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Bookify - Booking Website</h5>
+                            <p class="card-text">A modern booking platform where I contributed to documentation and UI design. Created intuitive interfaces and comprehensive user guides for seamless booking experience.</p>
+                            <a href="Assets/project 5.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/project 6.png" type="image/webp">
+                            <img src="Assets/project 6.png" class="card-img-top" alt="Micro retail application" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Micro Retail Application</h5>
+                            <p class="card-text">A comprehensive retail management application where I led documentation efforts, creating technical guides and system documentation for implementation and user training.</p>
+                            <a href="Assets/project 6.png" class="btn btn-primary" target="_blank">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -172,11 +250,14 @@
                 <!-- OJT Entry 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/ojt1.png" class="card-img-top" alt="OJT Task 1">
+                        <picture>
+                            <source srcset="Assets/1.jpg" type="image/webp">
+                            <img src="Assets/1.jpg" class="card-img-top" alt="PC troubleshooting and hardware repair" loading="lazy" width="400" height="200">
+                        </picture>
                         <div class="card-body">
-                            <h5 class="card-title">System Maintenance</h5>
-                            <p class="card-text">Assisted in troubleshooting and maintaining office computer systems, ensuring smooth daily operations.</p>
-                            <a href="Assets/OJT_Report1.pdf" class="btn btn-primary" target="_blank">View File</a>
+                            <h5 class="card-title">PC Troubleshooting & Hardware Repair</h5>
+                            <p class="card-text">Diagnosed and resolved hardware failures, performed system diagnostics, and conducted preventive maintenance on office computers to minimize downtime.</p>
+                            <a href="Assets/1.jpg" class="btn btn-primary" target="_blank">View File</a>
                         </div>
                     </div>
                 </div>
@@ -184,11 +265,14 @@
                 <!-- OJT Entry 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/ojt2.png" class="card-img-top" alt="OJT Task 2">
+                        <picture>
+                            <source srcset="Assets/4.jpg" type="image/webp">
+                            <img src="Assets/4.jpg" class="card-img-top" alt="RAM upgrade and laptop testing" loading="lazy" width="400" height="200">
+                        </picture>
                         <div class="card-body">
-                            <h5 class="card-title">Web Development Support</h5>
-                            <p class="card-text">Contributed to updating and testing web applications using HTML, CSS, and JavaScript.</p>
-                            <a href="Assets/OJT_Report2.pdf" class="btn btn-primary" target="_blank">View File</a>
+                            <h5 class="card-title">Hardware Upgrade & Laptop Testing</h5>
+                            <p class="card-text">Performed RAM upgrades on multiple laptops and conducted comprehensive testing to verify system performance, stability, and proper hardware integration.</p>
+                            <a href="Assets/4.jpg" class="btn btn-primary" target="_blank">View File</a>
                         </div>
                     </div>
                 </div>
@@ -196,11 +280,59 @@
                 <!-- OJT Entry 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card project-card">
-                        <img src="Assets/ojt3.png" class="card-img-top" alt="OJT Task 3">
+                        <picture>
+                            <source srcset="Assets/9.jpg" type="image/webp">
+                            <img src="Assets/9.jpg" class="card-img-top" alt="Server setup and configuration training" loading="lazy" width="400" height="200">
+                        </picture>
                         <div class="card-body">
-                            <h5 class="card-title">Documentation & Reports</h5>
-                            <p class="card-text">Prepared technical documentation and weekly reports summarizing tasks and learnings.</p>
-                            <a href="Assets/OJT_Report3.pdf" class="btn btn-primary" target="_blank">View File</a>
+                            <h5 class="card-title">Server Setup & Configuration Training</h5>
+                            <p class="card-text">Received hands-on training from supervisor on server installation, configuration, and maintenance. Learned server infrastructure management and best practices for system administration.</p>
+                            <a href="Assets/9.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/6.jpg" type="image/webp">
+                            <img src="Assets/6.jpg" class="card-img-top" alt="OJT hardware setup" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Hardware Setup & Installation</h5>
+                            <p class="card-text">Installed and configured new hardware components, including network devices and peripherals.</p>
+                            <a href="Assets/6.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/8.jpg" type="image/webp">
+                            <img src="Assets/8.jpg" class="card-img-top" alt="All-in-one PC testing and inspection" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">All-in-One PC Testing & Inspection</h5>
+                            <p class="card-text">Conducted functional testing on all-in-one computers to verify system performance and checked for physical damage including dents and defects.</p>
+                            <a href="Assets/8.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/2.jpg" type="image/webp">
+                            <img src="Assets/2.jpg" class="card-img-top" alt="OJT software testing" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Software Testing & QA</h5>
+                            <p class="card-text">Conducted quality assurance testing on applications and documented bugs and improvements.</p>
+                            <a href="Assets/2.jpg" class="btn btn-primary" target="_blank">View File</a>
                         </div>
                     </div>
                 </div>
@@ -211,45 +343,123 @@
 
     <section id="contact">
         <h1>Contact <span>Me</span></h1>
-        <p>Email: razelrosal77@gmail.com</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                <p>razelrosal77@gmail.com</p>
+            </div>
 
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                <p>+63 9563897958</p>
+            </div>
 
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-map-pin"></i> Address</h3>
+                <p>Manila, Philippines</p>
+            </div>
+
+            <div class="contact-item">
+                <h3><i class="fa-solid fa-clock"></i> Available Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+
+        <div class="socials" aria-label="Social links">
+            <a href="https://www.facebook.com/razel.rosal.77/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/zelly461/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
     </section>
 
     <!-- Scripts -->
     <script>
-        function hamburg() {
-            document.querySelector(".dropdown").style.display = "block";
-        }
-        function cancel() {
-            document.querySelector(".dropdown").style.display = "none";
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Accessible mobile menu toggle
+            const burger = document.querySelector('.hamburg');
+            const menu = document.getElementById('mobile-menu');
+            const closeBtn = document.querySelector('#mobile-menu .cancel');
 
-        const texts = [
-            "Hello, I am Razel Rosal",
-            "I am an IT Student",
-            "I am a Tech Enthusiast"
-        ];
-
-        let count = 0;
-        let index = 0;
-        let currentText = "";
-        let letter = "";
-
-        (function type() {
-            if (count === texts.length) count = 0;
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
-
-            document.querySelector(".typing").textContent = letter;
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 1500);
-            } else {
-                setTimeout(type, 100);
+            function openMenu() {
+                burger.setAttribute('aria-expanded', 'true');
+                menu.hidden = false;
+                const firstLink = menu.querySelector('a');
+                if (firstLink) firstLink.focus();
             }
-        })();
+
+            function closeMenu() {
+                burger.setAttribute('aria-expanded', 'false');
+                menu.hidden = true;
+                burger.focus();
+            }
+
+            burger.addEventListener('click', () => {
+                const expanded = burger.getAttribute('aria-expanded') === 'true';
+                if (expanded) closeMenu(); else openMenu();
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+            // Close when a link is clicked
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+            // Close on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+
+            // Progress bars: set widths from data-value
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            function setProgressBars() {
+                document.querySelectorAll('.progress-bar').forEach(pb => {
+                    const val = pb.dataset.value || '0';
+                    const bar = pb.querySelector('.progress');
+                    if (!bar) return;
+                    bar.textContent = val + '%';
+                    if (reduceMotion) {
+                        bar.style.width = val + '%';
+                    } else {
+                        // start at 0 then animate to value
+                        bar.style.width = '0%';
+                        requestAnimationFrame(() => { setTimeout(() => { bar.style.width = val + '%'; }, 50); });
+                    }
+                });
+            }
+
+            setProgressBars();
+
+            // Typing animation (reduced-motion aware)
+            const texts = [
+                'Hello, I am Razel Rosal',
+                'I am an IT Student',
+                'I am a Tech Enthusiast'
+            ];
+            const typingEl = document.querySelector('.typing');
+            if (typingEl) {
+                if (reduceMotion) {
+                    typingEl.textContent = texts[0];
+                } else {
+                    let tIndex = 0;
+                    let charIndex = 0;
+                    function typeLoop() {
+                        if (tIndex >= texts.length) tIndex = 0;
+                        const current = texts[tIndex];
+                        charIndex++;
+                        typingEl.textContent = current.slice(0, charIndex);
+                        if (charIndex === current.length) {
+                            tIndex++;
+                            charIndex = 0;
+                            setTimeout(typeLoop, 1400);
+                        } else {
+                            setTimeout(typeLoop, 80);
+                        }
+                    }
+                    typeLoop();
+                }
+            }
+
+      
+        });
     </script>
 </body>
 </html>

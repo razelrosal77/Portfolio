@@ -10,6 +10,7 @@
 
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation menu-->
@@ -46,7 +47,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" data-aos="fade-up">
         <div class="home-container">
             <!-- Left: Image -->
             <div class="home-img">
@@ -65,43 +66,618 @@
         </div>
     </section>
 
-    <!-- About Me Section (loaded from about.html) -->
-    <section id="about" data-include="about.html"></section>
+  
+    <!-- About Me Section -->
+    <section id="about" data-aos="fade-up">
+        <h1>About <span>Me</span></h1>
+        <p>
+            I am Razel Rosal, a 4th-year BS Information Technology student with a strong passion for solving problems through technology. 
+            I specialize in troubleshooting, PC assembly and disassembly, hardware maintenance, and technical documentation.
+        </p>
 
-    <!-- Skills Section (loaded from skills.html) -->
-    <section id="skills" data-include="skills.html"></section>
+        <div class="about-details">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li><strong>Technical Support:</strong> Hardware troubleshooting, system diagnostics, preventive maintenance</li>
+                        <li><strong>Hardware Skills:</strong> PC assembly, RAM upgrades, component replacement, device testing</li>
+                        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, responsive design</li>
+                        <li><strong>Programming:</strong> C#, Java, object-oriented design</li>
+                        <li><strong>Soft Skills:</strong> Communication, problem-solving, attention to detail, teamwork</li>
+                    </ul>
+                </div>
 
-    <!-- Projects Section (loaded from projects.html) -->
-    <section id="projects" data-include="projects.html"></section>
+                <div class="about-card">
+                    <h3>Professional Background</h3>
+                    <p>Currently pursuing a degree in Information Technology with hands-on experience in IT support, system administration, and web development. Completed extensive on-the-job training covering PC maintenance, server configuration, and hardware testing.</p>
+                    <p>Passionate about continuous learning and staying updated with emerging technologies in both hardware and software domains.</p>
+                </div>
+            </div>
 
-    <!-- OJT Section (loaded from ojt.html) -->
-    <section id="ojt" data-include="ojt.html"></section>
+            <div class="resume-link">
+                <h3>Resume / CV</h3>
+                <a href="Assets/CV.pdf" target="_blank" class="btn btn-primary">Download My Resume (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up">
+        <h1>My <span>Skills</span></h1>
+        <p>Here are the technologies and fields I specialize in:</p>
+
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Troubleshooting</h3>
+                <div class="progress-bar" data-value="80"><div class="progress">80%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-solid fa-code"></i>
+                <h3>C#</h3>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
+            </div>
+            <div class="skill">
+                <i class="fa-brands fa-java"></i>
+                <h3>Java</h3>
+                <div class="progress-bar" data-value="50"><div class="progress">50%</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+        <div class="container">
+            <h1>My <span>Projects</span></h1>
+            <p>Some of the works and projects I’ve built and contributed to.</p>
+
+            <div class="row mt-5">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                            <picture>
+                                <source srcset="Assets/Portfolio.png" type="image/webp">
+                                <img src="Assets/Portfolio.png" class="card-img-top" alt="Portfolio project screenshot" loading="lazy" width="400" height="200">
+                            </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+                            <a href="Assets/Portfolio.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/Project.jpg" type="image/webp">
+                            <img src="Assets/Project.jpg" class="card-img-top" alt="Tailor booking system screenshot" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Tabletop Strategy Game</h5>
+                             <p class="card-text">An Android-based turn-based strategy game 
+                                with interactive gameplay, dice mechanics, and dynamic weather events.</p>
+                            <a href="Assets/Project.jpg" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/PROJECT 3.png" type="image/webp">
+                            <img src="Assets/PROJECT 3.png" class="card-img-top" alt="Multimedia design project screenshot" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Multimedia Design Project</h5>
+                            <p class="card-text">A creative multimedia project created using Photoshop, featuring custom graphics, visual effects, and professional design techniques.</p>
+                            <a href="Assets/PROJECT 3.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/Project4.png" type="image/webp">
+                            <img src="Assets/Project4.png" class="card-img-top" alt="Blender stall 3D modeling project" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Blender Stall Project</h5>
+                            <p class="card-text">A 3D modeling project created in Blender featuring detailed stall design with realistic textures, lighting, and architectural elements.</p>
+                            <a href="Assets/Project4.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/project 5.png" type="image/webp">
+                            <img src="Assets/project 5.png" class="card-img-top" alt="Bookify booking website" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Bookify - Booking Website</h5>
+                            <p class="card-text">A modern booking platform where I contributed to documentation and UI design. Created intuitive interfaces and comprehensive user guides for seamless booking experience.</p>
+                            <a href="Assets/project 5.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/project 6.png" type="image/webp">
+                            <img src="Assets/project 6.png" class="card-img-top" alt="Micro retail application" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Micro Retail Application</h5>
+                            <p class="card-text">A comprehensive retail management application where I led documentation efforts, creating technical guides and system documentation for implementation and user training.</p>
+                            <a href="Assets/project 6.png" class="btn btn-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OJT Section -->
+    <section id="ojt" data-aos="fade-up">
+        <div class="container">
+            
+        <h1>About My <span>HTE</span></h1>
+        <p>Summary of my Hands-on Technical Experience (HTE) during the OJT placement.</p>
+
+        <div class="about-details">
+            <div class="about-grid">
+               <div class="about-card">
+    <h3>Northgate Technologies Inc.</h3>
+    <p>
+        Established in 1990, Northgate Technologies Inc. has continuously delivered products and services
+        that provide value to its customers and partners. The company offers best-of-breed IT products,
+        strategic IT solutions, and reliable IT services to SMEs and large enterprises across the Philippines.
+    </p>
+</div>
+
+<div class="about-card">
+    <h3>Mission</h3>
+    <p>
+        To place the organization in a position of strength by providing strategic technology solutions
+        and excellent services that create a significant impact on clients, enabling them to become more
+        efficient in their respective industries.
+    </p>
+</div>
 
 
-    <!-- Contact Section (loaded from contact.html) -->
-    <section id="contact" data-include="contact.html"></section>
+<div class="about-card">
+    <h3>Company Location</h3>
+    <p>
+        Northgate Technologies Inc. operates in the Philippines, providing IT solutions and technical
+        services to organizations nationwide.
+    </p>
+</div>
+
+            </div>
+
+          
+        </div>
+        
+            <h1>My <span>OJT Experience</span></h1>
+            <p>Here are some highlights, files, and pictures from my On-the-Job Training.</p>
+
+            <div class="row mt-5">
+                <!-- OJT Entry 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/1.jpg" type="image/webp">
+                            <img src="Assets/1.jpg" class="card-img-top" alt="PC troubleshooting and hardware repair" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">PC Troubleshooting & Hardware Repair</h5>
+                            <p class="card-text">Diagnosed and resolved hardware failures, performed system diagnostics, and conducted preventive maintenance on office computers to minimize downtime.</p>
+                            <a href="Assets/1.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/4.jpg" type="image/webp">
+                            <img src="Assets/4.jpg" class="card-img-top" alt="RAM upgrade and laptop testing" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Hardware Upgrade & Laptop Testing</h5>
+                            <p class="card-text">Performed RAM upgrades on multiple laptops and conducted comprehensive testing to verify system performance, stability, and proper hardware integration.</p>
+                            <a href="Assets/4.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/9.jpg" type="image/webp">
+                            <img src="Assets/9.jpg" class="card-img-top" alt="Server setup and configuration training" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Server Setup & Configuration Training</h5>
+                            <p class="card-text">Received hands-on training from supervisor on server installation, configuration, and maintenance. Learned server infrastructure management and best practices for system administration.</p>
+                            <a href="Assets/9.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/6.jpg" type="image/webp">
+                            <img src="Assets/6.jpg" class="card-img-top" alt="OJT hardware setup" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Hardware Setup & Installation</h5>
+                            <p class="card-text">Installed and configured new hardware components, including network devices and peripherals.</p>
+                            <a href="Assets/6.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/8.jpg" type="image/webp">
+                            <img src="Assets/8.jpg" class="card-img-top" alt="All-in-one PC testing and inspection" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">All-in-One PC Testing & Inspection</h5>
+                            <p class="card-text">Conducted functional testing on all-in-one computers to verify system performance and checked for physical damage including dents and defects.</p>
+                            <a href="Assets/8.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OJT Entry 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card">
+                        <picture>
+                            <source srcset="Assets/2.jpg" type="image/webp">
+                            <img src="Assets/2.jpg" class="card-img-top" alt="OJT software testing" loading="lazy" width="400" height="200">
+                        </picture>
+                        <div class="card-body">
+                            <h5 class="card-title">Software Testing & QA</h5>
+                            <p class="card-text">Conducted quality assurance testing on applications and documented bugs and improvements.</p>
+                            <a href="Assets/2.jpg" class="btn btn-primary" target="_blank">View File</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    
+        <h1>Documentation <span> & Reports</span></h1>
+        <p>All weekly reports, diffs, and supporting documentation collected during my OJT. Click to open or download.</p>
+
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 1</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 1 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 2</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 2 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 3</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 3 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 4</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 4 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 5</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 5 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 6</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 6 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 7</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 7 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 8</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 8 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 9</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 9 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 10</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 10 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 11</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 11 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 12</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 12 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 13</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 13 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 14</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 14 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 15</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 15 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 16</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 16 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 17</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 17 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 18</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 18 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 19</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 19 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 20</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 20 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weekly Report 21</h5>
+                            <p class="card-text">Detailed weekly report</p>
+                            <a href="Assets/Weekly/Week 21 progress report.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Acceptance Letter</h5>
+                            <p class="card-text">Acceptance letter on company</p>
+                            <a href="Assets/Pre-Deployment Requirments/AcceptanceLetter_ROSAL, Razel.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Open AL</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Vicinity Map</h5>
+                            <p class="card-text">Map showing the vicinity of the OJT site.</p>
+                            <a href="Assets/Pre-Deployment Requirments/CEIT-OJTF-003-OJT-Vicinity-Map-Razel-Rosal.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Open Map</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">OJT Oath of Undertaking</h5>
+                            <p class="card-text">Official oath of undertaking document for the On-the-Job Training program.</p>
+                            <a href="Assets/Pre-Deployment Requirments/CEIT-OJTF-007 OJT Oath of Undertaking-Razel-Rosal.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Document</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Company Profile</h5>
+                            <p class="card-text">Detailed profile of the company providing the OJT experience.</p>
+                            <a href="Assets/Pre-Deployment Requirments/NTI-Company-Profile.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Profile</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h1>Contact <span>Me</span></h1>
+        <div class="contact-details">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                    <p>razelrosal77@gmail.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                    <p>+63 9563897958</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3><i class="fa-solid fa-map-pin"></i> Address</h3>
+                    <p>Manila, Philippines</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3><i class="fa-solid fa-clock"></i> Available Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="socials" aria-label="Social links">
+                <a href="https://www.facebook.com/razel.rosal.77/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/zelly461/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
 
     <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            // Load HTML partials for sections marked with data-include before initializing
-            async function loadIncludes() {
-                const includes = document.querySelectorAll('[data-include]');
-                await Promise.all(Array.from(includes).map(async el => {
-                    const url = el.getAttribute('data-include');
-                    try {
-                        const res = await fetch(url);
-                        if (!res.ok) throw new Error('Failed to load ' + url + ' (' + res.status + ')');
-                        el.innerHTML = await res.text();
-                    } catch (err) {
-                        console.error(err);
-                        el.innerHTML = '<div style="padding:20px;background:#111;color:#fff;border-radius:8px;">Could not load ' + url + '</div>';
-                    }
-                }));
-            }
-
-            await loadIncludes();
-
+        document.addEventListener('DOMContentLoaded', () => {
             // Accessible mobile menu toggle
             const burger = document.querySelector('.hamburg');
             const menu = document.getElementById('mobile-menu');
@@ -186,6 +762,14 @@
             }
 
       
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            disable: 'phone'
         });
     </script>
 </body>
